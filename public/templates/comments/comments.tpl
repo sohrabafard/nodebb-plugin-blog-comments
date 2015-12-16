@@ -10,16 +10,16 @@
 		<form action="{relative_path}/comments/reply" method="post">
 			<textarea id="nodebb-content" class="form-control" name="content" placeholder="Join the conversation" rows="3"></textarea>
 		<!-- IF isLoggedIn -->
-			<small>Signed in as <strong>{user.username}</strong>. <strong id="nodebb-error"></strong></small>
-			<button class="btn btn-primary">Post a Reply</button>
+			<small>نام کاربری شما : <strong>{user.username}</strong>. <strong id="nodebb-error"></strong></small>
+			<button class="btn btn-primary">ارسال پاسخ</button>
 			<input type="hidden" name="_csrf" value="{token}" />
 			<input type="hidden" name="tid" value="{tid}" />
 			<input type="hidden" name="url" value="{redirect_url}" />
 		</form>
 		<!-- ELSE -->
 		</form>
-		<button class="btn btn-primary" id="nodebb-register">Register</button>
-		<button class="btn btn-primary" id="nodebb-login">Login</button>
+		<button class="btn btn-primary" id="nodebb-register">ثبت نام</button>
+		<button class="btn btn-primary" id="nodebb-login">ورود</button>
 		<br />
 		<!-- ENDIF isLoggedIn -->
 	<!-- ENDIF atTop -->
@@ -39,7 +39,7 @@
 						</a>
 					</div>
 					<div class="topic-text">
-						<div class="post-content" itemprop="text"><small><strong>{user.username}</strong> commented {posts.timestamp}</small><br />{posts.content}</div>
+						<div class="post-content" itemprop="text"><small><strong>{user.username}</strong> نوشته است  {posts.timestamp}</small><br />{posts.content}</div>
 					</div>
 				</div>
 			</div>
@@ -67,19 +67,19 @@
 		</form>
 		<!-- ELSE -->
 		</form>
-		<button class="btn btn-primary" id="nodebb-register">Register</button>
-		<button class="btn btn-primary" id="nodebb-login">Login</button>
+		<button class="btn btn-primary" id="nodebb-register">ثبت نام</button>
+		<button class="btn btn-primary" id="nodebb-login">ورود</button>
 		<br />
 		<!-- ENDIF isLoggedIn -->
 	<!-- ENDIF atBottom -->
 
-	<small class="nodebb-copyright">Powered by <a href="http://nodebb.org" target="_blank">NodeBB</a> &bull; <a href="{relative_path}/topic/{tid}">View original thread</a></small>
+	<small class="nodebb-copyright">Powered by <a href="http://nodebb.org" target="_blank">NodeBB</a> &bull; <a href="{relative_path}/topic/{tid}">نمایش در انجمن</a></small>
 	<button class="btn btn-primary" <!-- IF !posts.length -->style="display: none"<!-- ENDIF !posts.length --> id="nodebb-load-more">Load more comments...</button>
 <!-- ELSE -->
-	Commenting has been disabled.
+	سیستم نظردهی غیرفعال شده است
 	<!-- IF isAdmin -->
 	<form action="{relative_path}/comments/publish" method="post">
-		<button class="btn btn-primary">Publish this article to NodeBB</button>
+		<button class="btn btn-primary">ارسال این مقاله به انجمن</button>
 		<input type="hidden" name="markdown" id="nodebb-content-markdown" />
 		<input type="hidden" name="title" id="nodebb-content-title" />
 		<input type="hidden" name="tags" id="nodebb-content-tags" />
