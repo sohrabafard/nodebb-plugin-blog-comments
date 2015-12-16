@@ -8,7 +8,7 @@
 			<!-- ENDIF isLoggedIn -->
 		</div>
 		<form action="{relative_path}/comments/reply" method="post">
-			<textarea id="nodebb-content" class="form-control" name="content" placeholder="Join the conversation" rows="3"></textarea>
+			<textarea id="nodebb-content" class="form-control" name="content" placeholder="بشرکت در بحث" rows="3"></textarea>
 		<!-- IF isLoggedIn -->
 			<small>نام کاربری شما : <strong>{user.username}</strong>. <strong id="nodebb-error"></strong></small>
 			<button class="btn btn-primary">ارسال پاسخ</button>
@@ -57,10 +57,10 @@
 			<!-- ENDIF isLoggedIn -->
 		</div>
 		<form action="{relative_path}/comments/reply" method="post">
-			<textarea id="nodebb-content" class="form-control" name="content" placeholder="Join the conversation" rows="3"></textarea>
+			<textarea id="nodebb-content" class="form-control" name="content" placeholder="شرکت در بحث" rows="3"></textarea>
 		<!-- IF isLoggedIn -->
-			<small>Signed in as <strong>{user.username}</strong>. <strong id="nodebb-error"></strong></small>
-			<button class="btn btn-primary">Post a Reply</button>
+			<small>با حساب <strong>{user.username}</strong> وارد شده اید. <strong id="nodebb-error"></strong></small>
+			<button class="btn btn-primary">ارسال پاسخ</button>
 			<input type="hidden" name="_csrf" value="{token}" />
 			<input type="hidden" name="tid" value="{tid}" />
 			<input type="hidden" name="url" value="{redirect_url}" />
@@ -73,7 +73,7 @@
 		<!-- ENDIF isLoggedIn -->
 	<!-- ENDIF atBottom -->
 
-	<small class="nodebb-copyright">Powered by <a href="http://nodebb.org" target="_blank">NodeBB</a> &bull; <a href="{relative_path}/topic/{tid}">نمایش در انجمن</a></small>
+	<small class="nodebb-copyright">&bull; <a href="{relative_path}/topic/{tid}">نمایش در انجمن - جهت نوشتن پاسخ کامل، زیبا و راحت</a></small>
 	<button class="btn btn-primary" <!-- IF !posts.length -->style="display: none"<!-- ENDIF !posts.length --> id="nodebb-load-more">Load more comments...</button>
 <!-- ELSE -->
 	سیستم نظردهی غیرفعال شده است
